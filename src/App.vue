@@ -2,14 +2,13 @@
     import { onMounted, ref } from "vue";
     import JSZip from "jszip";
 
-    let jszip;
+    const jszip = new JSZip();
+    
     let canvas;
     let app;
     let loaded = ref(false);
 
     onMounted(() => {
-        jszip = new JSZip();
-        
         app = document.getElementById("app");
         canvas = document.getElementById("canvas").getContext("2d");
         
