@@ -1,8 +1,6 @@
 <script setup lang="ts">
     import { onMounted, ref } from "vue";
     import JSZip from "jszip";
-
-    const jszip = new JSZip();
     
     let canvas;
     let app;
@@ -26,7 +24,6 @@
         <button id="start" onclick="alert('Projects can\'t be started yet')">Start</button>
         <button id="stop" onclick="alert('Projects can\'t be stopped yet')">Stop</button>
         <button id="upload" onclick="alert('Projects can\'t be started yet')">Upload</button>
-        <input type="file" id="file-upload" class="hidden"/>
     </div>
     
     <div class="container">
