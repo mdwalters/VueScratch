@@ -13,6 +13,4 @@ export function run_project(data: Object, canvas: any): void {
             variables[data.targets[i].name][data.targets[i].variables[j][0]] = data.targets[i].variables[j][1];
         }
     }
-
-    alert(JSON.stringify(variables));
 }
