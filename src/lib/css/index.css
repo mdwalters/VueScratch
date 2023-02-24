@@ -68,3 +68,13 @@ button:hover {
 .hidden {
     display: none;
 }
+
+input {
+    background-color: #257bf5;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fcfcfc;
+    font-weight: 700;
+    margin-left: 5px;
+}

@@ -5,9 +5,6 @@
     let canvas: any;
     let app: any;
 
-    let stage_width = ref(480);
-    let stage_height = ref(360); 
-
     onMounted(() => {
         app = document.getElementById("app");
         canvas = document.getElementById("canvas").getContext("2d");
@@ -21,7 +18,7 @@
     <h1>VueScratch</h1>
     <p>VueScratch is a Scratch project runner written in Vue. It is currently experimental.</p>
 
-    <canvas id="canvas" width=stage_width height=stage_height></canvas>
+    <canvas id="canvas" width="480" height="360"></canvas>
     
     <div>
         <button id="start">Start</button>
