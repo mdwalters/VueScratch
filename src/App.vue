@@ -1,6 +1,7 @@
 <script setup lang="ts">
     // @ts-nocheck
     import { onMounted, ref } from "vue";
+    import { load_project, run_project } from "./lib/ts/project";
     
     let canvas: any;
     let app: any;
@@ -12,10 +13,13 @@
     }
 
     onMounted(async () => {
-        let project: Object = await load_project(804028943);
+        run_project(await load_project(804028943));
 
         app = document.getElementById("app");
         canvas = document.getElementById("canvas").getContext("2d");
+
+        let p = app.createElement("p").innerText = project;
+        app.append(p);
         
         canvas.fillStyle = "#fcfcfc";
         canvas.fillRect(0, 0, 480, 360);
