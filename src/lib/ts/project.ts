@@ -14,5 +14,5 @@ export function run_project(data: Object, canvas: any): void {
         }
     }
 
-    alert(variables);
+    alert(JSON.stringify(variables));
 }
