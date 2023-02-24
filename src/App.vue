@@ -23,6 +23,6 @@
     <div>
         <button id="start">Start</button>
         <button id="stop">Stop</button>
-        <input type="number" id="project-id" class="container" value="804028943">
+        <input type="number" id="project-id" value="804028943">
     </div>
 </template>
