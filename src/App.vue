@@ -1,8 +1,9 @@
 <script setup lang="ts">
+    // @ts-nocheck
     import { onMounted, ref } from "vue";
     
-    let canvas;
-    let app;
+    let canvas: any;
+    let app: any;
 
     let stage_width = ref(480);
     let stage_height = ref(360); 
@@ -25,6 +26,6 @@
     <div>
         <button id="start">Start</button>
         <button id="stop">Stop</button>
-        <input type="number" id="project-id" class="container">
+        <input type="number" id="project-id" class="container" value="804028943">
     </div>
 </template>
