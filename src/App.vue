@@ -5,13 +5,15 @@
     let canvas: any;
     let app: any;
 
-    async function load_project(id: number = 804028943): Promise<any> {
+    async function load_project(id: number): Object {
         let project_metadata: Promise<Object> = await fetch(`https://trampoline.turbowarp.org/proxy/projects/${id}`).then(res => res.json());
         let project: Promise<any> = await fetch(`https://projects.scratch.mit.edu/${id}?token=${project_metadata.project_token}`).then(res => res.arrayBuffer());
-        return project;
+        return new TextDecoder("utf-8").decode(new Uint8Array(project));
     }
 
-    onMounted(() => {
+    onMounted(async () => {
+        let project: Object = await load_project(804028943);
+
         app = document.getElementById("app");
         canvas = document.getElementById("canvas").getContext("2d");
         
