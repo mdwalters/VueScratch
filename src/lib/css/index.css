@@ -1,21 +1,37 @@
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url(sansation_light.woff);
+}
+
 body {
+    position: absolute;
     background-color: #4e97fe;
-    font-family: "Helvetica", sans-serif;
+    font-family: "Helvetica", Arial, sans-serif;
     color: #fcfcfc;
     justify-content: center;
     text-align: center;
-    font-weight: 700;
+    font-weight: 900;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
+    font-size: 50px;
+    margin: 0;
+}
+
+p {
+    font-weight: 800;
     margin: 0;
 }
 
 canvas {
     margin-top: 10px;
     border-radius: 5px;
-    border: 0.1px solid #9f99a1;
+    border: 0.1px solid #998f9c;
 }
 
 button {

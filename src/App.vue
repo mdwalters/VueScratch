@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    // @ts-nocheck
     import { onMounted, ref } from "vue";
     import JSZip from "jszip";
 
@@ -7,7 +6,6 @@
     
     let canvas;
     let app;
-    let loaded = ref(false);
 
     onMounted(() => {
         app = document.getElementById("app");
@@ -20,16 +18,18 @@
 
 <template>
     <h1>VueScratch</h1>
-    <p>VueScratch is a Scratch project runner written in Vue</p>
-    
+    <p>VueScratch is a Scratch project runner written in Vue. It is currently experimental.</p>
+
     <canvas id="canvas" width="480" height="360"></canvas>
     
     <div>
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
+        <button id="start" onclick="alert('Projects can\'t be started yet')">Start</button>
+        <button id="stop" onclick="alert('Projects can\'t be stopped yet')">Stop</button>
+        <button id="upload" onclick="alert('Projects can\'t be started yet')">Upload</button>
+        <input type="file" id="file-upload" class="hidden"/>
     </div>
-
-    <div v-if="!loaded" class="container warning">
-        <p>A project hasn't been loaded yet</p>
+    
+    <div class="container">
+        <p>A project hasn't been loaded yet.</p>
     </div>
 </template>
